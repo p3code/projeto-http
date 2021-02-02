@@ -1,0 +1,36 @@
+<div class="container">
+
+  <h2>Cadastrar Livro</h2>
+  <form class="form" [formGroup]="formGroup" (ngSubmit)="salvarLivro()">
+    <div class="campos-formulario">
+      <div class="form-group">
+        <label for="titulo">Titulo</label>
+        <input type="text" name="titulo" id="titulo" formControlName="titulo" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="preco">Preço</label>
+        <input type="text" name="preco" id="preco" formControlName="preco" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <input type="text" name="tipo" id="tipo" formControlName="tipo" class="form-control">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-dark">Salvar</button>
+
+  </form>
+
+  <h2>Lista de Livros</h2>
+  <div class="carregando" *ngIf="carregando">
+    Carregando...
+  </div>
+
+  <div class="lista" *ngIf="!carregando">
+    <div  class="livro" *ngFor="let livro of listaDeLivros">
+      <div class="titulo">{{ livro.nome }}</div>
+      <div class="preco">{{ livro.formatarPreco() }}</div>
+    </div>
+  </div>
+
+</div>

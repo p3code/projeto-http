@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Yusei+Magic&display=swap');
+
+.container {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Yusei Magic', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.livro {
+    padding: 20px;
+    background: #2f3640;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    box-shadow: 2px 2px lightgray;
+    box-sizing: border-box;
+    color: white;
+    border: 1px solid lightgray;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.livro:hover {
+    background: #353b48;
+}
+
+.livro .titulo {
+    font-size: 16px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.form {
+    background:#2f3640;
+    padding: 20px;
+    box-shadow: 2px 2px lightgray;
+    border: 1px solid white;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.form label {
+    color: white;
+}
+
+.form button {
+    width: 120px;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.campos-formulario {
+    display: grid;
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 800px;
+        margin: 0 auto;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    .container h2 {
+        grid-column: 1/4;
+    }
+
+    .form {
+        display: grid;
+        grid-column: 1/3;
+    }
+
+    .lista {
+        grid-column: 1/4;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
